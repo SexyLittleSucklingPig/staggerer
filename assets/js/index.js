@@ -8,7 +8,7 @@ $("#btnLogout").click(() => {
     layer.confirm("确定退出登录？", {
         icon: 3,
         title: ""
-    }, function (index) {
+    }, function () {
         // 清空本地存储里面的 token
         localStorage.removeItem("token");
         // 重新跳转到登录页面
@@ -44,4 +44,8 @@ const randerAvatar = (user) => {
         let firstName = name[0].toUpperCase();
         $(".text-avatar").html(firstName).show();
     }
+} 
+
+function change(){
+    $("#art_list").addClass("layui-this").next().removeClass("layui-this");
 }
